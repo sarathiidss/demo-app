@@ -24,7 +24,20 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-md-8 col-12">
-
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="name">Hi enter your Name</label>
+                                    <input id="name" class="form-control" type="text" name=""
+                                        placeholder="Enter your name">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                Hi <span id="name-text"></span>,
+                                <br>
+                                <a id="wish-to-all" class="btn btn-danger" type="button">WISH TO ALL</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <!-- myadd1 -->
@@ -56,6 +69,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#name').keyup(function () {
+                $('#name-text').text($('#name').val());
+                var linkData = "_*" + $('#name').val() + "*_ wishing you *Happy Krishna Jayandhi*";
+                var link = "https://wa.me/?phone&text=" + encodeURI(linkData);
+                $('#wish-to-all').attr("href", link);
+            });
+        });
+    </script>
 </body>
 
 </html>
