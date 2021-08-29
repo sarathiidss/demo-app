@@ -81,14 +81,17 @@
 
     <script>
         $(document).ready(function () {
-            $('#name').keyup(function () {
-                $('#name-text').text($('#name').val());
-                var linkData = "_*" + $('#name').val() + "*_ -யின் *இனிய கிருஷ்ண ஜெயந்தி* வாழ்த்துக்கள். மகாவிஷ்ணு எடுத்த 9 வது அவதாரம் தான் கிருஷ்ணர் . பூமியில் கிருஷ்ணராக மகா விஷ்ணு பிறந்த தினமே கிருஷ்ண ஜெயந்தியாக கொண்டாடப்படுகிறது.  *_இனிய கிருஷ்ண ஜெயந்தி நல் வாழ்த்துக்கள்_* ...!      உங்கள் வாழ்த்துக்களை தெரிவிக்க  https://sarathiidss.github.io/demo-app/ -யின் மூலமாக தெரிவிக்கலாம்";
-                var link = "https://wa.me/?phone&text=" + encodeURI(linkData);
-
-                $('#wish-to-all').attr("href", link);
-            });
+            setLink();
+            $('#name').keyup(setLink);
         });
+
+        function setLink() {
+            $('#name-text').text($('#name').val());
+            var linkData = "_*" + $('#name').val() + "*_ -யின் *இனிய கிருஷ்ண ஜெயந்தி* வாழ்த்துக்கள். மகாவிஷ்ணு எடுத்த 9 வது அவதாரம் தான் கிருஷ்ணர் . பூமியில் கிருஷ்ணராக மகா விஷ்ணு பிறந்த தினமே கிருஷ்ண ஜெயந்தியாக கொண்டாடப்படுகிறது.  *_இனிய கிருஷ்ண ஜெயந்தி நல் வாழ்த்துக்கள்_* ...!      உங்கள் வாழ்த்துக்களை தெரிவிக்க  https://sarathiidss.github.io/demo-app/ -யின் மூலமாக தெரிவிக்கலாம்";
+            var link = "https://wa.me/?phone&text=" + encodeURI(linkData);
+
+            $('#wish-to-all').attr("href", link);
+        }
     </script>
 </body>
 
