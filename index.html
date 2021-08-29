@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>இனிய கிருஷ்ண ஜெயந்தி</title>
 </head>
 
-<body>
+<body style="background-image: url(skj.jpg);background-position: center;background-size: cover;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -21,21 +21,30 @@
                 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2219042754170354"
                     data-ad-slot="9140777947" data-ad-format="auto" data-full-width-responsive="true"></ins>
             </div>
-            <div class="col-12">
+            <div class="col-12 h3">
                 <div class="row">
                     <div class="col-md-8 col-12">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="name">Hi enter your Name</label>
-                                    <input id="name" class="form-control" type="text" name=""
-                                        placeholder="Enter your name">
+                        <div class="card mt-3" style="background-color: #000000ba;">
+                            <div class="card-body text-center text-white">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="name">Hi enter your Name</label>
+                                            <input id="name" class="form-control" type="text" name=""
+                                                placeholder="Enter your name">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        Hi <span id="name-text"></span>,
+                                        <br>
+                                        <br>
+                                        <a id="wish-to-all" class="btn btn-danger text-white" type="button">WISH TO
+                                            ALL</a>
+                                    </div>
+                                    <div class="col-12">
+                                        <img class="img-fluid mt-3" src="./Shree-Krishna-GIF.gif" alt="">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                Hi <span id="name-text"></span>,
-                                <br>
-                                <a id="wish-to-all" class="btn btn-danger" type="button">WISH TO ALL</a>
                             </div>
                         </div>
                     </div>
@@ -74,8 +83,9 @@
         $(document).ready(function () {
             $('#name').keyup(function () {
                 $('#name-text').text($('#name').val());
-                var linkData = "_*" + $('#name').val() + "*_ wishing you *Happy Krishna Jayandhi*";
+                var linkData = "_*" + $('#name').val() + "*_ -யின் *இனிய கிருஷ்ண ஜெயந்தி* வாழ்த்துக்கள். மகாவிஷ்ணு எடுத்த 9 வது அவதாரம் தான் கிருஷ்ணர். பூமியில் கிருஷ்ணராக மகா விஷ்ணு பிறந்த தினமே கிருஷ்ண ஜெயந்தியாக கொண்டாடப்படுகிறது. *_இனிய கிருஷ்ண ஜெயந்தி நல் வாழ்த்துக்கள்_* ...!";
                 var link = "https://wa.me/?phone&text=" + encodeURI(linkData);
+
                 $('#wish-to-all').attr("href", link);
             });
         });
